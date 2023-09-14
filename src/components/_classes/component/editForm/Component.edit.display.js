@@ -145,6 +145,14 @@ export default [
     input: true
   },
   {
+    weight: 1150,
+    type: 'checkbox',
+    label: 'Only show the answer to admins',
+    tooltip: 'Check this if you would like the answer to be only visible to admins.',
+    key: 'adminOnly',
+    input: true
+  },
+  {
     weight: 1200,
     type: 'checkbox',
     label: 'Hide Label',

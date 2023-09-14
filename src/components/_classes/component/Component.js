@@ -93,6 +93,11 @@ export default class Component extends Element {
       hidden: false,
 
       /**
+       * Determines if answers to this component should only be visible to admins.
+       */
+      adminOnly: false,
+
+      /**
        * If the component should be cleared when hidden.
        */
       clearOnHide: true,

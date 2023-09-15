@@ -29,6 +29,7 @@ export class Formio {
   static plugins: any;
   static cache: any;
   static Providers: any;
+  static Utils: any;
   static events: any; // EventEmitter3
   static namespace: string;
   static formOnly?: boolean;

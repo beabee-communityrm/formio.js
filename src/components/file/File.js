@@ -154,6 +154,7 @@ export default class FileComponent extends Field {
         width: { min: 640, ideal: 1920 },
         height: { min: 360, ideal: 1080 },
         aspectRatio: { ideal: 16 / 9 },
+        facingMode: 'environment',
         ...constraints,
       },
       audio: false,

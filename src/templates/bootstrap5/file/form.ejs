@@ -80,8 +80,8 @@
         <a href="#" ref="fileBrowse" class="browse">
           {{ctx.t('browse')}}
           <span class="visually-hidden">
-            {{ctx.t('Browse to attach file for ' + ctx.component.label + '. ' + 
-            (ctx.component.description ? ctx.component.description + '. ' : '') + 
+            {{ctx.t('Browse to attach file for ' + ctx.component.label + '. ' +
+            (ctx.component.description ? ctx.component.description + '. ' : '') +
             ((!ctx.component.filePattern || ctx.component.filePattern === '*') ? 'Any file types are allowed' : ctx.t('Allowed file types: ') + ctx.component.filePattern))}}
           </span>
         </a>
@@ -91,7 +91,7 @@
     </div>
   {% } else { %}
     <div class="video-container">
-      <video class="video" autoplay="true" ref="videoPlayer" tabindex="-1"></video>
+      <video class="video" autoplay="true" ref="videoPlayer" playsinline muted tabindex="-1"></video>
     </div>
     <button class="btn btn-primary" ref="takePictureButton"><i class="fa fa-camera"></i> {{ctx.t('Take Picture')}}</button>
     <button class="btn btn-primary" ref="toggleCameraMode">{{ctx.t('Switch to file upload')}}</button>

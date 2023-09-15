@@ -1,6 +1,6 @@
 {
   "name": "@beabee/formiojs",
-  "version": "4.15.4",
+  "version": "4.15.5",
   "description": "JavaScript powered Forms with JSON Form Builder",
   "main": "index.js",
   "types": "index.d.ts",

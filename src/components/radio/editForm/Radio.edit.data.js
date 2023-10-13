@@ -1,4 +1,3 @@
-import BuilderUtils from '../../../utils/builder';
 import _ from 'lodash';
 
 export default [
@@ -31,7 +30,7 @@ export default [
     tooltip: 'The radio button values that can be picked for this field. Values are text submitted with the form data. Labels are text that appears next to the radio buttons on the form.',
     weight: 10,
     reorder: true,
-    defaultValue: [{ label: '', value: '' }],
+    defaultValue: [{ label: '', value: '', nextSlideId: '' }],
     components: [
       {
         label: 'Label',
@@ -51,24 +50,12 @@ export default [
         }
       },
       {
-        type: 'select',
+        type: 'textfield',
         input: true,
         weight: 180,
-        label: 'Shortcut',
-        key: 'shortcut',
-        tooltip: 'The shortcut key for this option.',
-        dataSrc: 'custom',
-        valueProperty: 'value',
-        customDefaultValue: () => '',
-        template: '{{ item.label }}',
-        data: {
-          custom(context) {
-            return BuilderUtils.getAvailableShortcuts(
-              _.get(context, 'instance.options.editForm', {}),
-              _.get(context, 'instance.options.editComponent', {})
-            );
-          },
-        },
+        label: 'Go to slide',
+        key: 'nextSlideId',
+        tooltip: 'The user\'s next slide will change to this when selecting this option.',
       },
     ],
     conditional: {

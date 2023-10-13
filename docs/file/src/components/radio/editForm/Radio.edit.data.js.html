@@ -223,7 +223,7 @@ export default [
     tooltip: &apos;The radio button values that can be picked for this field. Values are text submitted with the form data. Labels are text that appears next to the radio buttons on the form.&apos;,
     weight: 10,
     reorder: true,
-    defaultValue: [{ label: &apos;&apos;, value: &apos;&apos; }],
+    defaultValue: [{ label: &apos;&apos;, value: &apos;&apos;, nextSlideId: &apos;&apos; }],
     components: [
       {
         label: &apos;Label&apos;,
@@ -243,24 +243,12 @@ export default [
         }
       },
       {
-        type: &apos;select&apos;,
+        type: &apos;textfield&apos;,
         input: true,
         weight: 180,
-        label: &apos;Shortcut&apos;,
-        key: &apos;shortcut&apos;,
-        tooltip: &apos;The shortcut key for this option.&apos;,
-        dataSrc: &apos;custom&apos;,
-        valueProperty: &apos;value&apos;,
-        customDefaultValue: () =&gt; &apos;&apos;,
-        template: &apos;{{ item.label }}&apos;,
-        data: {
-          custom(context) {
-            return BuilderUtils.getAvailableShortcuts(
-              _.get(context, &apos;instance.options.editForm&apos;, {}),
-              _.get(context, &apos;instance.options.editComponent&apos;, {})
-            );
-          },
-        },
+        label: &apos;Go to slide&apos;,
+        key: &apos;nextSlideId&apos;,
+        tooltip: &apos;The user\&apos;s next slide will change to this when selecting this option.&apos;,
       },
     ],
     conditional: {

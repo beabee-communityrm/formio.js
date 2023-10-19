@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import { GlobalFormio as Formio } from '../../../Formio';
 
 export default [
   {
@@ -50,12 +50,26 @@ export default [
         }
       },
       {
-        type: 'textfield',
+        type: 'select',
         input: true,
-        weight: 180,
         label: 'Go to slide',
         key: 'nextSlideId',
         tooltip: 'The user\'s next slide will change to this when selecting this option.',
+        dataSrc: 'custom',
+        valueProperty: 'value',
+        values: {
+          custom() {
+            const Provider = Formio.Providers.getProvider('slides', 'custom');
+            if (!Provider) {
+              return [];
+            }
+            const slides = new Provider().getSlides();
+            return slides.map(slide => ({
+              label: slide.title,
+              value: slide.id,
+            }));
+          }
+        }
       },
     ],
     conditional: {

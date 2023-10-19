@@ -30,7 +30,7 @@
         role="{{ctx.component.type === 'selectboxes' ? 'checkbox' : 'radio'}}"
       >
       {% if (!ctx.component.optionsLabelPosition || ctx.component.optionsLabelPosition === 'right' || ctx.component.optionsLabelPosition === 'bottom') { %}
-      <span>{{ctx.t(item.label, { _userInput: true })}}</span>
+      <span>{{ctx.t(item.label, { _userInput: true })}}{% if (ctx.component.nextSlideId) { %} --&gt; {{ ctx.component.nextSlideId }}{% } %}</span>
       {% } %}
     </label>
   </div>

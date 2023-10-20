@@ -101,12 +101,14 @@ export default class RadioComponent extends ListComponent {
   }
 
   render() {
+    const slides = Object.fromEntries(this.options.formConfig?.slides?.map((slide) => [slide.value, slide.label]) || []);
     return super.render(this.renderTemplate('radio', {
       input: this.inputInfo,
       inline: this.component.inline,
       values: this.component.dataSrc === 'values' ? this.component.values : this.loadedOptions,
       value: this.dataValue,
       row: this.row,
+      slides
     }));
   }
 

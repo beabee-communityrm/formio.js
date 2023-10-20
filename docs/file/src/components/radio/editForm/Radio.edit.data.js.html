@@ -190,9 +190,7 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/components/radio/editForm/Radio.edit.data.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { GlobalFormio as Formio } from &apos;../../../Formio&apos;;
-
-export default [
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">export default [
   {
     key: &apos;multiple&apos;,
     ignore: true,
@@ -249,17 +247,10 @@ export default [
         tooltip: &apos;The user\&apos;s next slide will change to this when selecting this option.&apos;,
         dataSrc: &apos;custom&apos;,
         valueProperty: &apos;value&apos;,
-        values: {
-          custom() {
-            const Provider = Formio.Providers.getProvider(&apos;slides&apos;, &apos;custom&apos;);
-            if (!Provider) {
-              return [];
-            }
-            const slides = new Provider().getSlides();
-            return slides.map(slide =&gt; ({
-              label: slide.title,
-              value: slide.id,
-            }));
+        data: {
+          custom(context) {
+            console.log(&apos;radio values&apos;, context);
+            return [];
           }
         }
       },

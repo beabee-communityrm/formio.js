@@ -4758,12 +4758,6 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "src/components/radio/editform/radio.edit.data.js",
-    "file/src/components/radio/editForm/Radio.edit.data.js.html",
-    "src/components/radio/editForm/Radio.edit.data.js",
-    "file"
-  ],
-  [
     "src/components/radio/editform/radio.edit.display.js",
     "file/src/components/radio/editForm/Radio.edit.display.js.html",
     "src/components/radio/editForm/Radio.edit.display.js",

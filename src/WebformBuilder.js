@@ -6,6 +6,7 @@ import Components from './components/Components';
 import { GlobalFormio as Formio } from './Formio';
 import { fastCloneDeep, bootstrapVersion, getArrayFromComponentPath, getStringFromComponentPath } from './utils/utils';
 import { eachComponent, getComponent } from './utils/formUtils';
+import { slug } from './utils/slug';
 import BuilderUtils from './utils/builder';
 import _ from 'lodash';
 import autoScroll from 'dom-autoscroller';
@@ -1564,12 +1565,12 @@ export default class WebformBuilder extends Component {
   }
 
   updateComponentKey(data) {
-    return _.camelCase(
+    return slug(_.camelCase(
       data.title ||
       data.label ||
       data.placeholder ||
       data.type
-    ).replace(/^[0-9]*/, '');
+    ), { lower: false }).replace(/^[0-9]*/, '');
   }
 
   moveComponent(component) {
@@ -1797,11 +1798,11 @@ export default class WebformBuilder extends Component {
   }
 
   generateKey(info) {
-    return info.key || _.camelCase(
+    return info.key || slug(_.camelCase(
       info.title ||
       info.label ||
       info.placeholder ||
       info.type
-    );
+    ), { lower: false });
   }
 }

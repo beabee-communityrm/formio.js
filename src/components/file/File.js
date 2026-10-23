@@ -318,6 +318,12 @@ export default class FileComponent extends Field {
     }
   }
 
+  // Removing a file re-renders the component, which would drop keyboard focus to the page body.
+  focusAfterRemove() {
+    const target = this.refs.fileBrowse || this.refs.removeLink?.[0] || this.refs.fileStatusRemove?.[0];
+    target?.focus();
+  }
+
   attach(element) {
     this.loadRefs(element, {
       fileDrop: 'single',
@@ -382,7 +388,7 @@ export default class FileComponent extends Field {
         this.deleteFile(fileInfo);
         event.preventDefault();
         this.splice(index);
-        this.redraw();
+        this.redraw().then(() => this.focusAfterRemove());
       });
     });
 
@@ -393,7 +399,7 @@ export default class FileComponent extends Field {
           this.abortUpload();
         }
         this.statuses.splice(index, 1);
-        this.redraw();
+        this.redraw().then(() => this.focusAfterRemove());
       });
     });
 

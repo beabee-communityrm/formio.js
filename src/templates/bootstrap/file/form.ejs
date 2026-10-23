@@ -22,7 +22,11 @@
       <li class="list-group-item">
         <div class="row">
           {% if (!ctx.disabled) { %}
-            <div class="col-md-1"><i tabindex="0" class="{{ctx.iconClass('remove')}}" ref="removeLink"></i></div>
+            <div class="col-md-1">
+              <button type="button" class="btn btn-link p-0" ref="removeLink" aria-label="{{ctx.t('Remove')}} {{file.originalName || file.name}}">
+                <i class="{{ctx.iconClass('remove')}}" aria-hidden="true"></i>
+              </button>
+            </div>
           {% } %}
           <div class="col-md-{% if (ctx.self.hasTypes) { %}7{% } else { %}9{% } %}">
             {% if (ctx.component.uploadOnly) { %}
@@ -57,7 +61,9 @@
         <span>
           <img ref="fileImage" src="" alt="{{file.originalName || file.name}}" style="width:{{ctx.component.imageSize}}px">
           {% if (!ctx.disabled) { %}
-            <i tabindex="0" class="{{ctx.iconClass('remove')}}" ref="removeLink"></i>
+            <button type="button" class="btn btn-link p-0" ref="removeLink" aria-label="{{ctx.t('Remove')}} {{file.originalName || file.name}}">
+              <i class="{{ctx.iconClass('remove')}}" aria-hidden="true"></i>
+            </button>
           {% } %}
         </span>
       </div>
@@ -101,10 +107,9 @@
   <div class="file {{ctx.statuses.status === 'error' ? ' has-error' : ''}}">
     <div class="row">
       <div class="fileName col-form-label col-sm-10">{{status.originalName}}
-        <i class="{{ctx.iconClass('remove')}}" ref="fileStatusRemove">
-          <span class="sr-only">{{ctx.t('Remove button. Press to remove ' + status.originalName || status.name + '.')}}</span>
-          <span class="sr-only">{{status.message ? status.message.replace(';', '.') : ''}}</span>
-        </i>
+        <button type="button" class="btn btn-link p-0" ref="fileStatusRemove" aria-label="{{ctx.t('Remove')}} {{status.originalName || status.name}}">
+          <i class="{{ctx.iconClass('remove')}}" aria-hidden="true"></i>
+        </button>
       </div>
       <div class="fileSize col-form-label col-sm-2 text-right">{{ctx.fileSize(status.size)}}</div>
     </div>

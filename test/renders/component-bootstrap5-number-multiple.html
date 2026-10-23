@@ -7,7 +7,7 @@
     <tbody>
       <tr ref="row">
         <td width="100%">
-          <input ref="input" name="data[number]" type="text" class="form-control" lang="en" inputmode="decimal" value="" id="number-number" aria-labelledby="l-number-number " aria-required="false"></input>
+          <input ref="input" name="data[number]" type="text" class="form-control" lang="en" inputmode="decimal" value="" id="number-number" aria-labelledby="l-number-number" aria-describedby="e-number-number" aria-required="false"></input>
         </td>
         <td>
           <button type="button" class="btn btn-secondary" ref="removeRow">
@@ -22,5 +22,5 @@
       </tr>
     </tbody>
   </table>
-  <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+  <div ref="messageContainer" id="e-number-number" class="formio-errors invalid-feedback" role="alert"></div>
 </div>

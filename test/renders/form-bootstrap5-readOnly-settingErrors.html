@@ -10,7 +10,7 @@
         <div class="card-body" ref="nested-page1" id="page1-page1">
           <div id="html" class="formio-component formio-component-htmlelement formio-component-html " ref="component">
             <p class="formio-component-htmlelement " ref="html">Required validation should trigger inside all layout sets</p>
-            <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+            <div ref="messageContainer" id="e-html-html" class="formio-errors invalid-feedback" role="alert"></div>
           </div>
           <div id="panel1" class="formio-component formio-component-panel formio-component-panel1 " ref="component">
             <div class="mb-2 card border">
@@ -25,9 +25,9 @@
                     Text Field - Panel
                   </label>
                   <div ref="element">
-                    <input ref="input" name="data[textField]" type="text" class="form-control" lang="en" disabled="disabled" spellcheck="true" value="" id="textField-textField" aria-labelledby="l-textField-textField " aria-required="true"></input>
+                    <input ref="input" name="data[textField]" type="text" class="form-control" lang="en" disabled="disabled" spellcheck="true" value="" id="textField-textField" aria-labelledby="l-textField-textField" aria-describedby="e-textField-textField" aria-required="true"></input>
                   </div>
-                  <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+                  <div ref="messageContainer" id="e-textField-textField" class="formio-errors invalid-feedback" role="alert"></div>
                 </div>
                 <div id="number" class="formio-form-group has-feedback formio-component formio-component-number formio-component-number  required" ref="component">
                   <label ref="label" class="col-form-label  field-required" for="number-number" id="l-number-number">
@@ -35,9 +35,9 @@
                     <span class="visually-hidden">, numeric only,</span>
                   </label>
                   <div ref="element">
-                    <input ref="input" name="data[number]" type="text" class="form-control" lang="en" disabled="disabled" inputmode="decimal" value="" id="number-number" aria-labelledby="l-number-number " aria-required="true"></input>
+                    <input ref="input" name="data[number]" type="text" class="form-control" lang="en" disabled="disabled" inputmode="decimal" value="" id="number-number" aria-labelledby="l-number-number" aria-describedby="e-number-number" aria-required="true"></input>
                   </div>
-                  <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+                  <div ref="messageContainer" id="e-number-number" class="formio-errors invalid-feedback" role="alert"></div>
                 </div>
                 <div id="columns" class="row formio-component formio-component-columns formio-component-columns  formio-component-label-hidden" ref="component">
                   <div class="
@@ -50,9 +50,9 @@
                       <label ref="label" class="col-form-label  field-required" for="selectColumn-selectColumn" id="l-selectColumn-selectColumn">
                         Select - Column
                       </label>
-                      <select ref="selectContainer" name="data[selectColumn]" type="text" class="form-control" lang="en" disabled="disabled" id="selectColumn-selectColumn" aria-required="true"></select>
+                      <select ref="selectContainer" name="data[selectColumn]" type="text" class="form-control" lang="en" disabled="disabled" id="selectColumn-selectColumn" aria-describedby="e-selectColumn-selectColumn" aria-required="true"></select>
                       <input type="text" class="formio-select-autocomplete-input" ref="autocompleteInput" tabindex="-1" aria-label="autocomplete" />
-                      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+                      <div ref="messageContainer" id="e-selectColumn-selectColumn" class="formio-errors invalid-feedback" role="alert"></div>
                     </div>
                   </div>
                   <div class="
@@ -64,19 +64,19 @@
                     <div id="checkboxColumn" class="formio-form-group has-feedback formio-component formio-component-checkbox formio-component-checkboxColumn  required" ref="component">
                       <div class="form-check checkbox">
                         <label class=" field-required form-check-label">
-                          <input ref="input" name="data[checkboxColumn]" type="checkbox" class="form-check-input" lang="en" disabled="disabled" value="0" aria-required="true">
+                          <input ref="input" name="data[checkboxColumn]" type="checkbox" class="form-check-input" lang="en" disabled="disabled" value="0" aria-required="true" aria-describedby="e-checkboxColumn-checkboxColumn">
                           <span>Checkbox - Column</span>
                           </input>
                         </label>
                       </div>
-                      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+                      <div ref="messageContainer" id="e-checkboxColumn-checkboxColumn" class="formio-errors invalid-feedback" role="alert"></div>
                     </div>
                   </div>
-                  <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+                  <div ref="messageContainer" id="e-columns-columns" class="formio-errors invalid-feedback" role="alert"></div>
                 </div>
               </div>
             </div>
-            <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+            <div ref="messageContainer" id="e-panel1-panel1" class="formio-errors invalid-feedback" role="alert"></div>
           </div>
           <div id="fi" class="formio-form-group formio-component formio-component-fieldset formio-component-fi " ref="component">
             <fieldset>
@@ -85,10 +85,10 @@
               </legend>
               <div class="fieldset-body" ref="nested-fi">
                 <div id="radioFieldSet" class="formio-form-group has-feedback formio-component formio-component-radio formio-component-radioFieldSet  required" ref="component">
-                  <label ref="label" class="col-form-label  field-required" for="radioFieldSet-radioFieldSet" id="l-radioFieldSet-radioFieldSet">
+                  <label ref="label" class="col-form-label  field-required" id="l-radioFieldSet-radioFieldSet">
                     Radio - Field Set
                   </label>
-                  <div class="form-radio radio" ref="radioGroup" role="radiogroup" aria-required="true" aria-labelledby="l-radioFieldSet-radioFieldSet">
+                  <div class="form-radio radio" ref="radioGroup" role="radiogroup" aria-required="true" aria-labelledby="l-radioFieldSet-radioFieldSet" aria-describedby="e-radioFieldSet-radioFieldSet">
                     <div class="radio  form-check" ref="wrapper">
                       <label class="form-check-label label-position-right" for="-radioFieldSet--a">
                         <input ref="input" name="data[radioFieldSet][-radioFieldSet]" type="radio" class="form-check-input" lang="en" disabled="disabled" value="a" id="-radioFieldSet--a" role="radio">
@@ -108,7 +108,7 @@
                       </label>
                     </div>
                   </div>
-                  <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+                  <div ref="messageContainer" id="e-radioFieldSet-radioFieldSet" class="formio-errors invalid-feedback" role="alert"></div>
                 </div>
                 <div id="phoneNumberFieldset" class="formio-form-group has-feedback formio-component formio-component-phoneNumber formio-component-phoneNumberFieldset  required" ref="component">
                   <label ref="label" class="col-form-label  field-required" for="phoneNumberFieldset-phoneNumberFieldset" id="l-phoneNumberFieldset-phoneNumberFieldset">
@@ -116,9 +116,9 @@
                     <span class="visually-hidden">, numeric only,</span>
                   </label>
                   <div ref="element">
-                    <input ref="input" name="data[phoneNumberFieldset]" type="text" class="form-control" lang="en" inputmode="decimal" disabled="disabled" spellcheck="true" value="" id="phoneNumberFieldset-phoneNumberFieldset" aria-labelledby="l-phoneNumberFieldset-phoneNumberFieldset " aria-required="true"></input>
+                    <input ref="input" name="data[phoneNumberFieldset]" type="text" class="form-control" lang="en" inputmode="decimal" disabled="disabled" spellcheck="true" value="" id="phoneNumberFieldset-phoneNumberFieldset" aria-labelledby="l-phoneNumberFieldset-phoneNumberFieldset" aria-describedby="e-phoneNumberFieldset-phoneNumberFieldset" aria-required="true"></input>
                   </div>
-                  <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+                  <div ref="messageContainer" id="e-phoneNumberFieldset-phoneNumberFieldset" class="formio-errors invalid-feedback" role="alert"></div>
                 </div>
                 <div id="table" class="table-responsive formio-component formio-component-table formio-component-table  no-top-border-table" ref="component">
                   <table class="table
@@ -133,25 +133,25 @@
                             </label>
                             <div ref="element">
                               <div class="input-group">
-                                <input ref="input" name="data[dateTime]" type="text" class="form-control" lang="en" disabled="disabled" value="" id="dateTime-dateTime" aria-labelledby="l-dateTime-dateTime " aria-required="true"></input>
+                                <input ref="input" name="data[dateTime]" type="text" class="form-control" lang="en" disabled="disabled" value="" id="dateTime-dateTime" aria-labelledby="l-dateTime-dateTime" aria-describedby="e-dateTime-dateTime" aria-required="true"></input>
                                 <span aria-live="assertive" id="dateTime-liveRegion" class="visually-hidden" ref="liveRegion"></span>
                                 <div class="input-group-text" ref="suffix">
                                   <i ref="icon" class="fa fa-calendar" style=""></i>
                                 </div>
                               </div>
                             </div>
-                            <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+                            <div ref="messageContainer" id="e-dateTime-dateTime" class="formio-errors invalid-feedback" role="alert"></div>
                           </div>
                         </td>
                         <td ref="table-table-0" class="cell-align-left">
                           <div id="dayTable" class="formio-form-group has-feedback formio-component formio-component-day formio-component-dayTable " ref="component">
-                            <label ref="label" class="col-form-label " for="dayTable-dayTable" id="l-dayTable-dayTable">
+                            <label ref="label" class="col-form-label " id="l-dayTable-dayTable">
                               Day - Table
                             </label>
-                            <div class="row" role="group" aria-labelledby="l-dayTable-dayTable">
+                            <div class="row" role="group" aria-labelledby="l-dayTable-dayTable" aria-describedby="e-dayTable-dayTable">
                               <div class="col col-xs-4">
                                 <label for="dayTable-month" class="field-required">Month</label>
-                                <div><select ref="month" id="dayTable-month" class="form-control" name="month" lang="en" aria-required="true">
+                                <div><select ref="month" id="dayTable-month" class="form-control" name="month" lang="en" aria-describedby="e-dayTable-dayTable" aria-required="true">
                                     <option value=''>
                                     </option>
                                     <option value='1'>
@@ -197,18 +197,18 @@
                               <div class="col col-xs-3">
                                 <label for="dayTable-day" class="field-required">Day</label>
                                 <div>
-                                  <input ref="day" id="dayTable-day" class="form-control formio-day-component-day" type="number" placeholder="" step="1" min="1" max="31" id="dayTable-dayTable" aria-labelledby="l-dayTable-dayTable " aria-required="true"></input>
+                                  <input ref="day" id="dayTable-day" class="form-control formio-day-component-day" type="number" placeholder="" step="1" min="1" max="31" id="dayTable-dayTable" aria-labelledby="l-dayTable-dayTable" aria-describedby="e-dayTable-dayTable" aria-required="true"></input>
                                 </div>
                               </div>
                               <div class="col col-xs-5">
                                 <label for="dayTable-year" class="field-required">Year</label>
                                 <div>
-                                  <input ref="year" id="dayTable-year" class="form-control formio-day-component-year" type="number" placeholder="" step="1" min="1900" max="2030" id="dayTable-dayTable" aria-labelledby="l-dayTable-dayTable " aria-required="true"></input>
+                                  <input ref="year" id="dayTable-year" class="form-control formio-day-component-year" type="number" placeholder="" step="1" min="1900" max="2030" id="dayTable-dayTable" aria-labelledby="l-dayTable-dayTable" aria-describedby="e-dayTable-dayTable" aria-required="true"></input>
                                 </div>
                               </div>
                             </div>
                             <input name="ctx.data[day]" type="hidden" class="form-control" lang="en" value="" ref="input">
-                            <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+                            <div ref="messageContainer" id="e-dayTable-dayTable" class="formio-errors invalid-feedback" role="alert"></div>
                           </div>
                         </td>
                       </tr>
@@ -220,9 +220,9 @@
                               <span class="visually-hidden">, numeric only,</span>
                             </label>
                             <div ref="element">
-                              <input ref="input" name="data[currencyTable]" type="text" class="form-control" lang="en" disabled="disabled" inputmode="decimal" value="" id="currencyTable-currencyTable" aria-labelledby="l-currencyTable-currencyTable " aria-required="true"></input>
+                              <input ref="input" name="data[currencyTable]" type="text" class="form-control" lang="en" disabled="disabled" inputmode="decimal" value="" id="currencyTable-currencyTable" aria-labelledby="l-currencyTable-currencyTable" aria-describedby="e-currencyTable-currencyTable" aria-required="true"></input>
                             </div>
-                            <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+                            <div ref="messageContainer" id="e-currencyTable-currencyTable" class="formio-errors invalid-feedback" role="alert"></div>
                           </div>
                         </td>
                         <td ref="table-table-1" class="cell-align-left">
@@ -230,11 +230,11 @@
                       </tr>
                     </tbody>
                   </table>
-                  <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+                  <div ref="messageContainer" id="e-table-table" class="formio-errors invalid-feedback" role="alert"></div>
                 </div>
               </div>
             </fieldset>
-            <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+            <div ref="messageContainer" id="e-fi-fi" class="formio-errors invalid-feedback" role="alert"></div>
           </div>
           <div id="well1" class="" ref="component">
             <div class="card card-body bg-light mb-3">
@@ -244,9 +244,9 @@
                     Email - Well
                   </label>
                   <div ref="element">
-                    <input ref="input" name="data[emailWell]" type="email" class="form-control" lang="en" disabled="disabled" spellcheck="true" value="" id="emailWell-emailWell" aria-labelledby="l-emailWell-emailWell " aria-required="true"></input>
+                    <input ref="input" name="data[emailWell]" type="email" class="form-control" lang="en" disabled="disabled" spellcheck="true" value="" id="emailWell-emailWell" aria-labelledby="l-emailWell-emailWell" aria-describedby="e-emailWell-emailWell" aria-required="true"></input>
                   </div>
-                  <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+                  <div ref="messageContainer" id="e-emailWell-emailWell" class="formio-errors invalid-feedback" role="alert"></div>
                 </div>
                 <div id="addressWell" class="formio-form-group has-feedback formio-component formio-component-address formio-component-addressWell  required" ref="component">
                   <label ref="label" class="col-form-label  field-required" for="addressWell-addressWell" id="l-addressWell-addressWell">
@@ -256,15 +256,15 @@
                     <input ref="searchInput" name="data[addressWell]" type="text" class="form-control" lang="en" tabindex="0" disabled="disabled" value="" autocomplete="off" aria-label="autocomplete">
                     <i class="address-autocomplete-remove-value-icon fa fa-times" tabindex="0" ref="removeValueIcon"></i>
                   </div>
-                  <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+                  <div ref="messageContainer" id="e-addressWell-addressWell" class="formio-errors invalid-feedback" role="alert"></div>
                 </div>
               </div>
             </div>
-            <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+            <div ref="messageContainer" id="e-well1-well1" class="formio-errors invalid-feedback" role="alert"></div>
           </div>
         </div>
       </div>
-      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+      <div ref="messageContainer" id="e-page1-page1" class="formio-errors invalid-feedback" role="alert"></div>
     </div>
     <div id="submit" class="formio-form-group has-feedback formio-component formio-component-button formio-component-submit  formio-form-group" ref="component">
       <button ref="button" name="data[submit]" type="submit" class="btn btn-primary btn-md" lang="en" disabled="disabled">
@@ -273,8 +273,8 @@
       <div ref="buttonMessageContainer">
         <span class="help-block" ref="buttonMessage"></span>
       </div>
-      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+      <div ref="messageContainer" id="e-submit-submit" class="formio-errors invalid-feedback" role="alert"></div>
     </div>
   </div>
-  <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+  <div ref="messageContainer" id="e--" class="formio-errors invalid-feedback" role="alert"></div>
 </div>

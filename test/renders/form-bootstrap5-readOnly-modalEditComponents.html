@@ -11,12 +11,12 @@
             <div id="checkbox" class="formio-form-group has-feedback formio-component formio-component-checkbox formio-component-checkbox " ref="component">
               <div class="form-check checkbox">
                 <label class=" form-check-label">
-                  <input ref="input" name="data[checkbox]" type="checkbox" class="form-check-input" lang="en" disabled="disabled" value="0" aria-required="false">
+                  <input ref="input" name="data[checkbox]" type="checkbox" class="form-check-input" lang="en" disabled="disabled" value="0" aria-required="false" aria-describedby="e-checkbox-checkbox">
                   <span>Checkbox</span>
                   </input>
                 </label>
               </div>
-              <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+              <div ref="messageContainer" id="e-checkbox-checkbox" class="formio-errors invalid-feedback" role="alert"></div>
             </div>
             <div class="formio-dialog-buttons">
               <button class="btn btn-success formio-dialog-button" ref="modalSave" aria-label="Save button. Click to save the changes and get back to the form.">Save</button>
@@ -39,9 +39,9 @@
                 TextField
               </label>
               <div ref="element">
-                <input ref="input" name="data[textfield]" type="text" class="form-control" lang="en" disabled="disabled" spellcheck="true" value="" id="textfield-textfield" aria-labelledby="l-textfield-textfield " aria-required="false"></input>
+                <input ref="input" name="data[textfield]" type="text" class="form-control" lang="en" disabled="disabled" spellcheck="true" value="" id="textfield-textfield" aria-labelledby="l-textfield-textfield" aria-describedby="e-textfield-textfield" aria-required="false"></input>
               </div>
-              <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+              <div ref="messageContainer" id="e-textfield-textfield" class="formio-errors invalid-feedback" role="alert"></div>
             </div>
             <div class="formio-dialog-buttons">
               <button class="btn btn-success formio-dialog-button" ref="modalSave" aria-label="Save button. Click to save the changes and get back to the form.">Save</button>
@@ -60,10 +60,10 @@
           <button class="formio-dialog-close float-end btn btn-secondary btn-sm" aria-label="Close button. Click to get back to the form" ref="modalClose"></button>
           <div ref="modalContents">
             <div id="selectBoxes" class="formio-form-group has-feedback formio-component formio-component-selectboxes formio-component-selectBoxes " ref="component">
-              <label ref="label" class="col-form-label " for="selectBoxes-selectBoxes" id="l-selectBoxes-selectBoxes">
+              <label ref="label" class="col-form-label " id="l-selectBoxes-selectBoxes">
                 Select Boxes
               </label>
-              <div class="form-radio radio" ref="radioGroup" role="group" aria-required="false" aria-labelledby="l-selectBoxes-selectBoxes">
+              <div class="form-radio radio" ref="radioGroup" role="group" aria-required="false" aria-labelledby="l-selectBoxes-selectBoxes" aria-describedby="e-selectBoxes-selectBoxes">
                 <div class="checkbox  form-check" ref="wrapper">
                   <label class="form-check-label label-position-right" for="-selectBoxes--a">
                     <input ref="input" name="data[selectBoxes][]" type="checkbox" class="form-check-input" lang="en" disabled="disabled" value="a" id="-selectBoxes--a" role="checkbox">
@@ -77,7 +77,7 @@
                   </label>
                 </div>
               </div>
-              <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+              <div ref="messageContainer" id="e-selectBoxes-selectBoxes" class="formio-errors invalid-feedback" role="alert"></div>
             </div>
             <div class="formio-dialog-buttons">
               <button class="btn btn-success formio-dialog-button" ref="modalSave" aria-label="Save button. Click to save the changes and get back to the form.">Save</button>
@@ -99,9 +99,9 @@
               <label ref="label" class="col-form-label " for="select-select" id="l-select-select">
                 Select
               </label>
-              <select ref="selectContainer" name="data[select]" type="text" class="form-control" lang="en" disabled="disabled" id="select-select" aria-required="false"></select>
+              <select ref="selectContainer" name="data[select]" type="text" class="form-control" lang="en" disabled="disabled" id="select-select" aria-describedby="e-select-select" aria-required="false"></select>
               <input type="text" class="formio-select-autocomplete-input" ref="autocompleteInput" tabindex="-1" aria-label="autocomplete" />
-              <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+              <div ref="messageContainer" id="e-select-select" class="formio-errors invalid-feedback" role="alert"></div>
             </div>
             <div class="formio-dialog-buttons">
               <button class="btn btn-success formio-dialog-button" ref="modalSave" aria-label="Save button. Click to save the changes and get back to the form.">Save</button>
@@ -118,8 +118,8 @@
       <div ref="buttonMessageContainer">
         <span class="help-block" ref="buttonMessage"></span>
       </div>
-      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+      <div ref="messageContainer" id="e-submit-submit" class="formio-errors invalid-feedback" role="alert"></div>
     </div>
   </div>
-  <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+  <div ref="messageContainer" id="e--" class="formio-errors invalid-feedback" role="alert"></div>
 </div>

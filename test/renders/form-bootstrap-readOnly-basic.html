@@ -5,9 +5,9 @@
         Text
       </label>
       <div ref="element">
-        <input ref="input" name="data[text]" type="text" class="form-control" lang="en" disabled="disabled" spellcheck="true" value="" id="text-text" aria-labelledby="l-text-text " aria-required="true"></input>
+        <input ref="input" name="data[text]" type="text" class="form-control" lang="en" disabled="disabled" spellcheck="true" value="" id="text-text" aria-labelledby="l-text-text" aria-describedby="e-text-text" aria-required="true"></input>
       </div>
-      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+      <div ref="messageContainer" id="e-text-text" class="formio-errors invalid-feedback" role="alert"></div>
     </div>
     <div id="multiple" class="form-group has-feedback formio-component formio-component-textfield formio-component-multiple formio-component-multiple " ref="component">
       <label ref="label" class="col-form-label " for="multiple-multiple" id="l-multiple-multiple">
@@ -17,12 +17,12 @@
         <tbody>
           <tr ref="row">
             <td width="100%">
-              <input ref="input" name="data[multiple]" type="text" class="form-control" lang="en" disabled="disabled" spellcheck="true" value="" id="multiple-multiple" aria-labelledby="l-multiple-multiple " aria-required="false"></input>
+              <input ref="input" name="data[multiple]" type="text" class="form-control" lang="en" disabled="disabled" spellcheck="true" value="" id="multiple-multiple" aria-labelledby="l-multiple-multiple" aria-describedby="e-multiple-multiple" aria-required="false"></input>
             </td>
           </tr>
         </tbody>
       </table>
-      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+      <div ref="messageContainer" id="e-multiple-multiple" class="formio-errors invalid-feedback" role="alert"></div>
     </div>
     <div id="everything" class="form-group has-feedback formio-component formio-component-textfield formio-component-everything formio-component-multiple CustomCssClass required" ref="component">
       <label ref="label" class="col-form-label  field-required" for="everything-everything" id="l-everything-everything">
@@ -39,7 +39,7 @@
           Prefix
       </span>
                 </div>
-                <input ref="input" name="data[everything]" type="text" class="form-control" lang="en" placeholder="Placeholder" tabindex="1" disabled="disabled" spellcheck="true" value="" id="everything-everything" aria-labelledby="l-everything-everything d-everything-everything" aria-required="true"></input>
+                <input ref="input" name="data[everything]" type="text" class="form-control" lang="en" placeholder="Placeholder" tabindex="1" disabled="disabled" spellcheck="true" value="" id="everything-everything" aria-labelledby="l-everything-everything" aria-describedby="d-everything-everything e-everything-everything" aria-required="true"></input>
                 <div class="input-group-append" ref="suffix">
                   <span class="input-group-text">
         Suffix
@@ -51,7 +51,7 @@
         </tbody>
       </table>
       <div id="d-everything-everything" class="form-text text-muted">Description</div>
-      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+      <div ref="messageContainer" id="e-everything-everything" class="formio-errors invalid-feedback" role="alert"></div>
     </div>
     <div id="number" class="form-group has-feedback formio-component formio-component-number formio-component-number " ref="component">
       <label ref="label" class="col-form-label " for="number-number" id="l-number-number">
@@ -59,18 +59,18 @@
         <span class="sr-only">, numeric only,</span>
       </label>
       <div ref="element">
-        <input ref="input" name="data[number]" type="text" class="form-control" lang="en" disabled="disabled" inputmode="decimal" value="" id="number-number" aria-labelledby="l-number-number " aria-required="false"></input>
+        <input ref="input" name="data[number]" type="text" class="form-control" lang="en" disabled="disabled" inputmode="decimal" value="" id="number-number" aria-labelledby="l-number-number" aria-describedby="e-number-number" aria-required="false"></input>
       </div>
-      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+      <div ref="messageContainer" id="e-number-number" class="formio-errors invalid-feedback" role="alert"></div>
     </div>
     <div id="password" class="form-group has-feedback formio-component formio-component-password formio-component-password " ref="component">
       <label ref="label" class="col-form-label " for="password-password" id="l-password-password">
         Password
       </label>
       <div ref="element">
-        <input ref="input" name="data[password]" type="password" class="form-control" lang="en" disabled="disabled" spellcheck="true" value="" id="password-password" aria-labelledby="l-password-password " aria-required="false"></input>
+        <input ref="input" name="data[password]" type="password" class="form-control" lang="en" disabled="disabled" spellcheck="true" value="" id="password-password" aria-labelledby="l-password-password" aria-describedby="e-password-password" aria-required="false"></input>
       </div>
-      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+      <div ref="messageContainer" id="e-password-password" class="formio-errors invalid-feedback" role="alert"></div>
     </div>
     <div id="textArea" class="form-group has-feedback formio-component formio-component-textarea formio-component-textArea " ref="component">
       <label ref="label" class="col-form-label " for="textArea-textArea" id="l-textArea-textArea">
@@ -83,23 +83,23 @@
           </div>
         </div>
       </div>
-      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+      <div ref="messageContainer" id="e-textArea-textArea" class="formio-errors invalid-feedback" role="alert"></div>
     </div>
     <div id="checkbox" class="form-group has-feedback formio-component formio-component-checkbox formio-component-checkbox " ref="component">
       <div class="form-check checkbox">
         <label class=" form-check-label">
-          <input ref="input" name="data[checkbox]" type="checkbox" class="form-check-input" lang="en" disabled="disabled" value="0" aria-required="false">
+          <input ref="input" name="data[checkbox]" type="checkbox" class="form-check-input" lang="en" disabled="disabled" value="0" aria-required="false" aria-describedby="e-checkbox-checkbox">
           <span>Checkbox</span>
           </input>
         </label>
       </div>
-      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+      <div ref="messageContainer" id="e-checkbox-checkbox" class="formio-errors invalid-feedback" role="alert"></div>
     </div>
     <div id="selectBoxes" class="form-group has-feedback formio-component formio-component-selectboxes formio-component-selectBoxes " ref="component">
-      <label ref="label" class="col-form-label " for="selectBoxes-selectBoxes" id="l-selectBoxes-selectBoxes">
+      <label ref="label" class="col-form-label " id="l-selectBoxes-selectBoxes">
         Select Boxes
       </label>
-      <div class="form-radio radio" ref="radioGroup" role="group" aria-required="false" aria-labelledby="l-selectBoxes-selectBoxes">
+      <div class="form-radio radio" ref="radioGroup" role="group" aria-required="false" aria-labelledby="l-selectBoxes-selectBoxes" aria-describedby="e-selectBoxes-selectBoxes">
         <div class="checkbox  form-check" ref="wrapper">
           <label class="form-check-label label-position-right" for="-selectBoxes--one">
             <input ref="input" name="data[selectBoxes][]" type="checkbox" class="form-check-input" lang="en" disabled="disabled" value="one" id="-selectBoxes--one" role="checkbox">
@@ -119,21 +119,21 @@
           </label>
         </div>
       </div>
-      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+      <div ref="messageContainer" id="e-selectBoxes-selectBoxes" class="formio-errors invalid-feedback" role="alert"></div>
     </div>
     <div id="select" class="form-group has-feedback formio-component formio-component-select formio-component-select " ref="component">
       <label ref="label" class="col-form-label " for="select-select" id="l-select-select">
         Select
       </label>
-      <select ref="selectContainer" name="data[select]" type="text" class="form-control" lang="en" disabled="disabled" id="select-select" aria-required="false"></select>
+      <select ref="selectContainer" name="data[select]" type="text" class="form-control" lang="en" disabled="disabled" id="select-select" aria-describedby="e-select-select" aria-required="false"></select>
       <input type="text" class="formio-select-autocomplete-input" ref="autocompleteInput" tabindex="-1" aria-label="autocomplete" />
-      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+      <div ref="messageContainer" id="e-select-select" class="formio-errors invalid-feedback" role="alert"></div>
     </div>
     <div id="radio" class="form-group has-feedback formio-component formio-component-radio formio-component-radio " ref="component">
-      <label ref="label" class="col-form-label " for="radio-radio" id="l-radio-radio">
+      <label ref="label" class="col-form-label " id="l-radio-radio">
         Radio
       </label>
-      <div class="form-radio radio" ref="radioGroup" role="radiogroup" aria-required="false" aria-labelledby="l-radio-radio">
+      <div class="form-radio radio" ref="radioGroup" role="radiogroup" aria-required="false" aria-labelledby="l-radio-radio" aria-describedby="e-radio-radio">
         <div class="radio  form-check" ref="wrapper">
           <label class="form-check-label label-position-right" for="-radio--one">
             <input ref="input" name="data[radio][-radio]" type="radio" class="form-check-input" lang="en" disabled="disabled" value="one" id="-radio--one" role="radio">
@@ -153,13 +153,13 @@
           </label>
         </div>
       </div>
-      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+      <div ref="messageContainer" id="e-radio-radio" class="formio-errors invalid-feedback" role="alert"></div>
     </div>
     <div id="radioInline" class="form-group has-feedback formio-component formio-component-radio formio-component-radioInline " ref="component">
-      <label ref="label" class="col-form-label " for="radioInline-radioInline" id="l-radioInline-radioInline">
+      <label ref="label" class="col-form-label " id="l-radioInline-radioInline">
         Radio Inline
       </label>
-      <div class="form-radio radio" ref="radioGroup" role="radiogroup" aria-required="false" aria-labelledby="l-radioInline-radioInline">
+      <div class="form-radio radio" ref="radioGroup" role="radiogroup" aria-required="false" aria-labelledby="l-radioInline-radioInline" aria-describedby="e-radioInline-radioInline">
         <div class="radio  form-check-inline" ref="wrapper">
           <label class="form-check-label label-position-right" for="-radioInline--one">
             <input ref="input" name="data[radioInline][-radioInline]" type="radio" class="form-check-input" lang="en" disabled="disabled" value="one" id="-radioInline--one" role="radio">
@@ -179,17 +179,17 @@
           </label>
         </div>
       </div>
-      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+      <div ref="messageContainer" id="e-radioInline-radioInline" class="formio-errors invalid-feedback" role="alert"></div>
     </div>
     <div id="content" class="formio-component formio-component-htmlelement formio-component-content  formio-component-label-hidden" ref="component">
       <p class="formio-component-htmlelement cssclass" ref="html" attribute="value">HTML Content</p>
-      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+      <div ref="messageContainer" id="e-content-content" class="formio-errors invalid-feedback" role="alert"></div>
     </div>
     <div id="content2" class="formio-component formio-component-content formio-component-content2  formio-component-label-hidden" ref="component">
       <div class="formio-component-htmlelement " ref="html">
         <p>Content <strong>Bold</strong></p>
       </div>
-      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+      <div ref="messageContainer" id="e-content2-content2" class="formio-errors invalid-feedback" role="alert"></div>
     </div>
     <div id="submit" class="form-group has-feedback formio-component formio-component-button formio-component-submit  form-group" ref="component">
       <button ref="button" name="data[submit]" type="submit" class="btn btn-primary btn-md" lang="en" disabled="disabled">
@@ -198,8 +198,8 @@
       <div ref="buttonMessageContainer">
         <span class="help-block" ref="buttonMessage"></span>
       </div>
-      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+      <div ref="messageContainer" id="e-submit-submit" class="formio-errors invalid-feedback" role="alert"></div>
     </div>
   </div>
-  <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+  <div ref="messageContainer" id="e--" class="formio-errors invalid-feedback" role="alert"></div>
 </div>

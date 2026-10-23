@@ -4,9 +4,7 @@
   role="{{ctx.component.type === 'selectboxes' ? 'group' : 'radiogroup'}}"
   aria-required="{{ctx.input.component.validate.required}}"
   aria-labelledby="l-{{ctx.instance.id}}-{{ctx.component.key}}"
-  {% if (ctx.component.description) { %}
-    aria-describedby="d-{{ctx.instance.id}}-{{ctx.component.key}}"
-  {% } %}
+  aria-describedby="{% if (ctx.component.description) { %}d-{{ctx.instance.id}}-{{ctx.component.key}} {% } %}e-{{ctx.instance.id}}-{{ctx.component.key}}"
 >
   {% ctx.values.forEach(function(item) { %}
   <div class="{{ctx.input.attr.type}} {{ ctx.component.optionsLabelPosition && ctx.component.optionsLabelPosition !== 'right' ? 'pl-0' : ''}} form-check{{ctx.inline ? '-inline' : ''}}" ref="wrapper">

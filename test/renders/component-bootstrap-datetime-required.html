@@ -4,7 +4,7 @@
   </label>
   <div ref="element">
     <div class="input-group">
-      <input ref="input" name="data[dateTime]" type="text" class="form-control" lang="en" value="" id="dateTime-dateTime" aria-labelledby="l-dateTime-dateTime " aria-required="true"></input>
+      <input ref="input" name="data[dateTime]" type="text" class="form-control" lang="en" value="" id="dateTime-dateTime" aria-labelledby="l-dateTime-dateTime" aria-describedby="e-dateTime-dateTime" aria-required="true"></input>
       <span aria-live="assertive" id="dateTime-liveRegion" class="sr-only" ref="liveRegion"></span>
       <div class="input-group-append" ref="suffix">
         <span class="input-group-text">
@@ -13,5 +13,5 @@
       </div>
     </div>
   </div>
-  <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+  <div ref="messageContainer" id="e-dateTime-dateTime" class="formio-errors invalid-feedback" role="alert"></div>
 </div>

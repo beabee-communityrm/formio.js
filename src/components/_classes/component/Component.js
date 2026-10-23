@@ -813,6 +813,11 @@ export default class Component extends Element {
       this.options.inputsOnly) && !this.builderMode;
   }
 
+  // True when the label names a group via aria-labelledby, so there is no single input for `for` to point at.
+  labelIsGroupHeading() {
+    return false;
+  }
+
   transform(type, value) {
     const frameworkTemplates = this.options.template ? Templates.templates[this.options.template] : Templates.current;
     return frameworkTemplates.hasOwnProperty('transform')

@@ -100,6 +100,10 @@ export default class RadioComponent extends ListComponent {
     this.loadedOptions = [];
   }
 
+  labelIsGroupHeading() {
+    return true;
+  }
+
   render() {
     const slides = Object.fromEntries(this.options.formConfig?.slides?.map((slide) => [slide.value, slide.label]) || []);
     return super.render(this.renderTemplate('radio', {

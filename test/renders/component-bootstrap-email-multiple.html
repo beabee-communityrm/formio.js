@@ -5,8 +5,8 @@
   <table class="table table-bordered">
     <tbody>
       <tr ref="row">
-        <td>
-          <input ref="input" name="data[email]" type="email" class="form-control" lang="en" spellcheck="true" value="" id="email-email" aria-labelledby="l-email-email " aria-required="false"></input>
+        <td width="100%">
+          <input ref="input" name="data[email]" type="email" class="form-control" lang="en" spellcheck="true" value="" id="email-email" aria-labelledby="l-email-email" aria-describedby="e-email-email" aria-required="false"></input>
         </td>
         <td>
           <button type="button" class="btn btn-secondary" ref="removeRow">
@@ -21,5 +21,5 @@
       </tr>
     </tbody>
   </table>
-  <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+  <div ref="messageContainer" id="e-email-email" class="formio-errors invalid-feedback" role="alert"></div>
 </div>

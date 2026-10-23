@@ -28,6 +28,10 @@ export default class SurveyComponent extends Field {
     return SurveyComponent.schema();
   }
 
+  labelIsGroupHeading() {
+    return true;
+  }
+
   render() {
     return super.render(this.renderTemplate('survey'));
   }

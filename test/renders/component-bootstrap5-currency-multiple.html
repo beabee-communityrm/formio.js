@@ -6,8 +6,8 @@
   <table class="table table-bordered">
     <tbody>
       <tr ref="row">
-        <td>
-          <input ref="input" name="data[currency]" type="text" class="form-control" lang="en" inputmode="decimal" value="" id="currency-currency" aria-labelledby="l-currency-currency " aria-required="false"></input>
+        <td width="100%">
+          <input ref="input" name="data[currency]" type="text" class="form-control" lang="en" inputmode="decimal" value="" id="currency-currency" aria-labelledby="l-currency-currency" aria-describedby="e-currency-currency" aria-required="false"></input>
         </td>
         <td>
           <button type="button" class="btn btn-secondary" ref="removeRow">
@@ -22,5 +22,5 @@
       </tr>
     </tbody>
   </table>
-  <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+  <div ref="messageContainer" id="e-currency-currency" class="formio-errors invalid-feedback" role="alert"></div>
 </div>

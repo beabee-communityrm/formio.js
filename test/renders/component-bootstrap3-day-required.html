@@ -5,7 +5,7 @@
   <div class="row">
     <div class="form-group col col-xs-4">
       <label for="day-month" class="">Month</label>
-      <div><select ref="month" id="day-month" class="form-control" name="month" lang="en" aria-required="false">
+      <div><select ref="month" id="day-month" class="form-control" name="month" lang="en" aria-describedby="e-day-day" aria-required="false">
           <option value=''>
           </option>
           <option value='1'>
@@ -62,5 +62,5 @@
     </div>
   </div>
   <input name="data[day]" type="hidden" class="form-control" lang="en" value="" ref="input">
-  <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+  <div ref="messageContainer" id="e-day-day" class="formio-errors invalid-feedback" role="alert"></div>
 </div>

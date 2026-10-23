@@ -137,6 +137,10 @@ export default class FileComponent extends Field {
     this._fileBrowseHidden = value;
   }
 
+  labelIsGroupHeading() {
+    return true;
+  }
+
   render() {
     return super.render(this.renderTemplate('file', {
       fileSize: this.fileSize,

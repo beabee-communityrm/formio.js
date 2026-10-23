@@ -535,8 +535,9 @@ export default class AddressComponent extends ContainerComponent {
         };
 
         this.addEventListener(removeValueIcon, 'click', removeValueHandler);
-        this.addEventListener(removeValueIcon, 'keydown', ({ key }) => {
-          if (key === 'Enter') {
+        this.addEventListener(removeValueIcon, 'keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
             removeValueHandler();
           }
         });

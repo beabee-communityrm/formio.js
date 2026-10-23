@@ -52,6 +52,31 @@ describe('Address Component', () => {
     }).catch(done);
   });
 
+  it('Should treat a string default value as an empty address', (done) => {
+    const form = _.cloneDeep(comp2);
+    const element = document.createElement('div');
+    form.components[0].defaultValue = '{}';
+    form.components[0].validate = { required: true };
+
+    Formio.createForm(element, form).then(form => {
+      const address = form.getComponent('address');
+      assert.equal(_.isPlainObject(address.dataValue), true, 'String default should become an object');
+      assert.equal(address.isEmpty(), true, 'String default should count as empty');
+      assert.equal(form.checkValidity(form.submission.data, true), false, 'Required address should be invalid');
+
+      const searchInput = address.refs.searchInput[0];
+      searchInput.value = '';
+      const keyupEvent = new Event('keyup');
+      searchInput.dispatchEvent(keyupEvent);
+
+      setTimeout(() => {
+        assert.equal(address.isEmpty(), true);
+        document.innerHTML = '';
+        done();
+      }, 100);
+    }).catch(done);
+  });
+
   it('Test manual mode', (done) => {
     const form = _.cloneDeep(comp2);
     const element = document.createElement('div');

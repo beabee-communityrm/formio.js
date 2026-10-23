@@ -218,7 +218,7 @@ export default class AddressComponent extends ContainerComponent {
   }
 
   get defaultValue() {
-    let defaultValue = super.defaultValue;
+    let defaultValue = this.normalizeValue(super.defaultValue);
 
     if (this.isMultiple) {
       defaultValue = _.isArray(defaultValue) ? defaultValue : [defaultValue];
@@ -235,13 +235,31 @@ export default class AddressComponent extends ContainerComponent {
     return value && !value.mode;
   }
 
+  // A saved schema or submission can carry a stringified address such as "{}"; anything that is not an object is no address.
   normalizeValue(value) {
+    if (_.isArray(value)) {
+      return value.map((item) => (_.isPlainObject(item) ? item : this.emptyValue));
+    }
+    if (!_.isPlainObject(value)) {
+      return this.emptyValue;
+    }
     return (this.manualModeEnabled && this.isValueInLegacyFormat(value))
       ? {
         mode: AddressComponentMode.Autocomplete,
         address: value,
       }
       : value;
+  }
+
+  isEmpty(value = this.dataValue) {
+    if (_.isArray(value)) {
+      return value.every((item) => this.isEmpty(item));
+    }
+    if (!_.isPlainObject(value)) {
+      return true;
+    }
+    const address = (this.manualModeEnabled && value.mode) ? value.address : value;
+    return _.isEmpty(address);
   }
 
   setValue(value, flags = {}) {
@@ -571,7 +589,7 @@ export default class AddressComponent extends ContainerComponent {
       this.triggerChange();
     }
 
-    if (this.address?.[index]) {
+    if (_.isArray(this.address)) {
       this.address[index] = this.emptyValue;
     }
     else {

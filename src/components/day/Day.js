@@ -45,6 +45,10 @@ export default class DayComponent extends Field {
    *
    * @return {'00/00/0000'}
    */
+  labelIsGroupHeading() {
+    return true;
+  }
+
   get emptyValue() {
     return '00/00/0000';
   }

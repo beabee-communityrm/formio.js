@@ -20,12 +20,12 @@
           <div id="checkbox" class="form-group has-feedback formio-component formio-component-checkbox formio-component-checkbox " ref="component">
             <div class="form-check checkbox">
               <label class=" form-check-label">
-                <input ref="input" name="data[checkbox]" type="checkbox" class="form-check-input" lang="en" value="0" aria-required="false">
+                <input ref="input" name="data[checkbox]" type="checkbox" class="form-check-input" lang="en" value="0" aria-required="false" aria-describedby="e-checkbox-checkbox">
                 <span>hide</span>
                 </input>
               </label>
             </div>
-            <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+            <div ref="messageContainer" id="e-checkbox-checkbox" class="formio-errors invalid-feedback" role="alert"></div>
           </div>
         </div>
         <div role="tabpanel" class="card-body tab-pane" style="display: none" ref="tab-tabs">
@@ -53,17 +53,17 @@
                   <td ref="datagrid-dataGrid">
                     <div id="label" class="form-group has-feedback formio-component formio-component-textfield formio-component-label  formio-component-label-hidden" ref="component">
                       <div ref="element">
-                        <input ref="input" name="data[dataGrid][0][label]" type="text" class="form-control" lang="en" spellcheck="true" value="" id="label-label" aria-labelledby="l-label-label " aria-required="false"></input>
+                        <input ref="input" name="data[dataGrid][0][label]" type="text" class="form-control" lang="en" spellcheck="true" value="" id="label-label" aria-labelledby="l-label-label" aria-describedby="e-label-label" aria-required="false"></input>
                       </div>
-                      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+                      <div ref="messageContainer" id="e-label-label" class="formio-errors invalid-feedback" role="alert"></div>
                     </div>
                   </td>
                   <td ref="datagrid-dataGrid">
                     <div id="value" class="form-group has-feedback formio-component formio-component-textfield formio-component-value  formio-component-label-hidden" ref="component">
                       <div ref="element">
-                        <input ref="input" name="data[dataGrid][0][value]" type="text" class="form-control" lang="en" spellcheck="true" value="" id="value-value" aria-labelledby="l-value-value " aria-required="false"></input>
+                        <input ref="input" name="data[dataGrid][0][value]" type="text" class="form-control" lang="en" spellcheck="true" value="" id="value-value" aria-labelledby="l-value-value" aria-describedby="e-value-value" aria-required="false"></input>
                       </div>
-                      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+                      <div ref="messageContainer" id="e-value-value" class="formio-errors invalid-feedback" role="alert"></div>
                     </div>
                   </td>
                   <td class="col-md-1">
@@ -83,11 +83,11 @@
                 </tr>
               </tfoot>
             </table>
-            <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+            <div ref="messageContainer" id="e-dataGrid-dataGrid" class="formio-errors invalid-feedback" role="alert"></div>
           </div>
         </div>
       </div>
-      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+      <div ref="messageContainer" id="e-tabs-tabs" class="formio-errors invalid-feedback" role="alert"></div>
     </div>
     <div id="submit" class="form-group has-feedback formio-component formio-component-button formio-component-submit  form-group" ref="component">
       <button ref="button" name="data[submit]" type="submit" class="btn btn-primary btn-md" lang="en">
@@ -96,8 +96,8 @@
       <div ref="buttonMessageContainer">
         <span class="help-block" ref="buttonMessage"></span>
       </div>
-      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+      <div ref="messageContainer" id="e-submit-submit" class="formio-errors invalid-feedback" role="alert"></div>
     </div>
   </div>
-  <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+  <div ref="messageContainer" id="e--" class="formio-errors invalid-feedback" role="alert"></div>
 </div>

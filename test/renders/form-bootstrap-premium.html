@@ -1,7 +1,7 @@
 <div id="" class="formio-component formio-component-form  formio-component-label-hidden" ref="component">
   <div class="formio-form" ref="webform" novalidate>
     <div id="files" class="form-group has-feedback formio-component formio-component-file formio-component-files " ref="component">
-      <label ref="label" class="col-form-label " for="files-files" id="l-files-files">
+      <label ref="label" class="col-form-label " id="l-files-files">
         Files
       </label>
       <ul class="list-group list-group-striped">
@@ -13,14 +13,11 @@
           </div>
         </li>
       </ul>
-      <div class="fileSelector" ref="fileDrop">
-        <i class="fa fa-cloud-upload"></i> Drop files to attach,
+      <div class="fileSelector" ref="fileDrop" role="group" aria-labelledby="l-files-files" aria-describedby="e-files-files">
+        <i class="fa fa-cloud-upload" aria-hidden="true"></i> Drop files to attach,
         or
         <a href="#" ref="fileBrowse" class="browse">
           browse
-          <span class="sr-only">
-            Browse to attach file for Files. Any file types are allowed
-          </span>
         </a>
         <div ref="fileProcessingLoader" class="loader-wrapper">
           <div class="loader text-center"></div>
@@ -31,14 +28,11 @@
     <div id="file" class="form-group has-feedback formio-component formio-component-file formio-component-file formio-component-multiple  formio-component-label-hidden" ref="component">
       <div>
       </div>
-      <div class="fileSelector" ref="fileDrop">
-        <i class="fa fa-cloud-upload"></i> Drop files to attach,
+      <div class="fileSelector" ref="fileDrop" role="group" aria-label="file" aria-describedby="e-file-file">
+        <i class="fa fa-cloud-upload" aria-hidden="true"></i> Drop files to attach,
         or
         <a href="#" ref="fileBrowse" class="browse">
           browse
-          <span class="sr-only">
-            Browse to attach file for file. Any file types are allowed
-          </span>
         </a>
         <div ref="fileProcessingLoader" class="loader-wrapper">
           <div class="loader text-center"></div>

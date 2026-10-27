@@ -206,6 +206,34 @@ describe('Component', () => {
     .catch(done);
   });
 
+  it('Should announce dirty validation messages through the live region after a delay', (done) => {
+    const form = new Webform(document.createElement('div'));
+    form.setForm({
+      components: [{ type: 'textfield', key: 'a', label: 'A', input: true, validate: { required: true } }],
+    }).then(() => {
+      const a = form.getComponent('a');
+      const container = a.refs.messageContainer;
+      const liveRegion = a.refs.messageLiveRegion;
+      assert.equal(container.getAttribute('role'), null, 'Error container must not be a live region');
+      assert.equal(liveRegion.getAttribute('aria-live'), 'polite');
+
+      // Blur validation runs without the dirty flag once the field is no longer pristine.
+      a.pristine = false;
+      a.setCustomValidity([{ message: 'A is required', level: 'error' }], false);
+      assert.equal(liveRegion.textContent, '', 'Announcement is delayed past the focus change');
+      assert.equal(container.textContent.trim(), 'A is required');
+
+      setTimeout(() => {
+        assert.equal(liveRegion.textContent, 'A is required');
+
+        a.setCustomValidity([], false);
+        assert.equal(liveRegion.textContent, '', 'Clearing the error clears the announcement');
+        assert.equal(container.textContent.trim(), '');
+        done();
+      }, 600);
+    }).catch(done);
+  });
+
   describe('shouldSkipValidation', () => {
     it('should return true if component is hidden', done => {
       Harness.testCreate(Component, comp1)

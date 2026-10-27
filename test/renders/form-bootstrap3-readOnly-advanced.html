@@ -7,7 +7,8 @@
       <div ref="element">
         <input ref="input" name="data[email]" type="email" class="form-control" lang="en" disabled="disabled" spellcheck="true" value="" id="email-email"></input>
       </div>
-      <div ref="messageContainer" id="e-email-email" class="formio-errors invalid-feedback" role="alert"></div>
+      <div ref="messageContainer" id="e-email-email" class="formio-errors invalid-feedback"></div>
+      <div ref="messageLiveRegion" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap"></div>
     </div>
     <div id="phoneNumber" class="form-group has-feedback formio-component formio-component-phoneNumber formio-component-phoneNumber " ref="component">
       <label class="control-label " for="phoneNumber-phoneNumber">
@@ -16,7 +17,8 @@
       <div ref="element">
         <input ref="input" name="data[phoneNumber]" type="text" class="form-control" lang="en" inputmode="decimal" disabled="disabled" spellcheck="true" value="" id="phoneNumber-phoneNumber"></input>
       </div>
-      <div ref="messageContainer" id="e-phoneNumber-phoneNumber" class="formio-errors invalid-feedback" role="alert"></div>
+      <div ref="messageContainer" id="e-phoneNumber-phoneNumber" class="formio-errors invalid-feedback"></div>
+      <div ref="messageLiveRegion" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap"></div>
     </div>
     <div id="address" class="form-group has-feedback formio-component formio-component-address formio-component-address " ref="component">
       <label class="control-label " for="address-address">
@@ -26,7 +28,8 @@
         <input ref="searchInput" name="data[address]" type="text" class="form-control" lang="en" tabindex="0" disabled="disabled" value="" autocomplete="off" id="address-address" aria-labelledby="l-address-address" aria-describedby="e-address-address" aria-required="false">
         <i class="address-autocomplete-remove-value-icon fa fa-times" tabindex="0" role="button" aria-label="Clear" ref="removeValueIcon"></i>
       </div>
-      <div ref="messageContainer" id="e-address-address" class="formio-errors invalid-feedback" role="alert"></div>
+      <div ref="messageContainer" id="e-address-address" class="formio-errors invalid-feedback"></div>
+      <div ref="messageLiveRegion" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap"></div>
     </div>
     <div id="dateTime" class="form-group has-feedback formio-component formio-component-datetime formio-component-dateTime " ref="component">
       <label class="control-label " for="dateTime-dateTime">
@@ -40,7 +43,8 @@
           </div>
         </div>
       </div>
-      <div ref="messageContainer" id="e-dateTime-dateTime" class="formio-errors invalid-feedback" role="alert"></div>
+      <div ref="messageContainer" id="e-dateTime-dateTime" class="formio-errors invalid-feedback"></div>
+      <div ref="messageLiveRegion" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap"></div>
     </div>
     <div id="day" class="form-group has-feedback formio-component formio-component-day formio-component-day " ref="component">
       <label class="control-label " for="day-day">
@@ -106,7 +110,8 @@
         </div>
       </div>
       <input name="data[day]" type="hidden" class="form-control" lang="en" value="" ref="input">
-      <div ref="messageContainer" id="e-day-day" class="formio-errors invalid-feedback" role="alert"></div>
+      <div ref="messageContainer" id="e-day-day" class="formio-errors invalid-feedback"></div>
+      <div ref="messageLiveRegion" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap"></div>
     </div>
     <div id="time" class="form-group has-feedback formio-component formio-component-time formio-component-time " ref="component">
       <label class="control-label " for="time-time">
@@ -115,7 +120,8 @@
       <div ref="element">
         <input ref="input" name="data[time]" type="time" class="form-control" lang="en" disabled="disabled" spellcheck="true" value="" id="time-time"></input>
       </div>
-      <div ref="messageContainer" id="e-time-time" class="formio-errors invalid-feedback" role="alert"></div>
+      <div ref="messageContainer" id="e-time-time" class="formio-errors invalid-feedback"></div>
+      <div ref="messageLiveRegion" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap"></div>
     </div>
     <div id="currency" class="form-group has-feedback formio-component formio-component-currency formio-component-currency " ref="component">
       <label class="control-label " for="currency-currency">
@@ -124,7 +130,8 @@
       <div ref="element">
         <input ref="input" name="data[currency]" type="text" class="form-control" lang="en" disabled="disabled" inputmode="decimal" value="" id="currency-currency"></input>
       </div>
-      <div ref="messageContainer" id="e-currency-currency" class="formio-errors invalid-feedback" role="alert"></div>
+      <div ref="messageContainer" id="e-currency-currency" class="formio-errors invalid-feedback"></div>
+      <div ref="messageLiveRegion" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap"></div>
     </div>
     <div id="resource" class="form-group has-feedback formio-component formio-component-resource formio-component-resource " ref="component">
       <label class="control-label " for="resource-resource">
@@ -132,7 +139,8 @@
       </label>
       <select ref="selectContainer" name="data[resource]" type="text" class="form-control" lang="en" disabled="disabled" id="resource-resource" aria-describedby="e-resource-resource" aria-required="false"></select>
       <input type="text" class="formio-select-autocomplete-input" ref="autocompleteInput" tabindex="-1" aria-label="autocomplete" />
-      <div ref="messageContainer" id="e-resource-resource" class="formio-errors invalid-feedback" role="alert"></div>
+      <div ref="messageContainer" id="e-resource-resource" class="formio-errors invalid-feedback"></div>
+      <div ref="messageLiveRegion" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap"></div>
     </div>
     <div id="resourceAdd" class="form-group has-feedback formio-component formio-component-resource formio-component-resourceAdd formio-component-multiple " ref="component">
       <label class="control-label " for="resourceAdd-resourceAdd">
@@ -140,7 +148,8 @@
       </label>
       <select ref="selectContainer" multiple name="data[resourceAdd]" type="text" class="form-control" lang="en" disabled="disabled" id="resourceAdd-resourceAdd" aria-describedby="e-resourceAdd-resourceAdd" aria-required="false"></select>
       <input type="text" class="formio-select-autocomplete-input" ref="autocompleteInput" tabindex="-1" aria-label="autocomplete" />
-      <div ref="messageContainer" id="e-resourceAdd-resourceAdd" class="formio-errors invalid-feedback" role="alert"></div>
+      <div ref="messageContainer" id="e-resourceAdd-resourceAdd" class="formio-errors invalid-feedback"></div>
+      <div ref="messageLiveRegion" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap"></div>
     </div>
     <div id="signature" class="form-group has-feedback formio-component formio-component-signature formio-component-signature  required formio-component-label-hidden signature-pad" ref="component">
       <label class=" field-required control-label--hidden"></label>
@@ -160,7 +169,8 @@
           Sign above
         </div>
       </div>
-      <div ref="messageContainer" id="e-signature-signature" class="formio-errors invalid-feedback" role="alert"></div>
+      <div ref="messageContainer" id="e-signature-signature" class="formio-errors invalid-feedback"></div>
+      <div ref="messageLiveRegion" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap"></div>
     </div>
     <div id="tags" class="form-group has-feedback formio-component formio-component-tags formio-component-tags " ref="component">
       <label class="control-label " for="tags-tags">
@@ -169,7 +179,8 @@
       <div ref="element">
         <input ref="input" name="data[tags]" type="text" class="form-control" lang="en" disabled="disabled" value="" id="tags-tags"></input>
       </div>
-      <div ref="messageContainer" id="e-tags-tags" class="formio-errors invalid-feedback" role="alert"></div>
+      <div ref="messageContainer" id="e-tags-tags" class="formio-errors invalid-feedback"></div>
+      <div ref="messageLiveRegion" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap"></div>
     </div>
     <div id="survey" class="form-group has-feedback formio-component formio-component-survey formio-component-survey " ref="component">
       <label class="control-label " for="survey-survey">
@@ -212,11 +223,13 @@
           </tr>
         </tbody>
       </table>
-      <div ref="messageContainer" id="e-survey-survey" class="formio-errors invalid-feedback" role="alert"></div>
+      <div ref="messageContainer" id="e-survey-survey" class="formio-errors invalid-feedback"></div>
+      <div ref="messageLiveRegion" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap"></div>
     </div>
     <div id="location" class="form-group has-feedback formio-component formio-component-location formio-component-location " ref="component">
       Unknown component: location
-      <div ref="messageContainer" id="e-location-location" class="formio-errors invalid-feedback" role="alert"></div>
+      <div ref="messageContainer" id="e-location-location" class="formio-errors invalid-feedback"></div>
+      <div ref="messageLiveRegion" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap"></div>
     </div>
     <div id="submit" class="form-group has-feedback formio-component formio-component-button formio-component-submit  form-group" ref="component">
       <button ref="button" name="data[submit]" type="submit" class="btn btn-primary btn-md" lang="en" disabled="disabled">
@@ -225,8 +238,10 @@
       <div ref="buttonMessageContainer">
         <span class="help-block" ref="buttonMessage"></span>
       </div>
-      <div ref="messageContainer" id="e-submit-submit" class="formio-errors invalid-feedback" role="alert"></div>
+      <div ref="messageContainer" id="e-submit-submit" class="formio-errors invalid-feedback"></div>
+      <div ref="messageLiveRegion" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap"></div>
     </div>
   </div>
-  <div ref="messageContainer" id="e--" class="formio-errors invalid-feedback" role="alert"></div>
+  <div ref="messageContainer" id="e--" class="formio-errors invalid-feedback"></div>
+  <div ref="messageLiveRegion" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap"></div>
 </div>

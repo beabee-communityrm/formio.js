@@ -14,6 +14,7 @@
       aria-labelledby="l-{{ctx.instance.id}}-{{ctx.component.key}}"
       {% } %}
       aria-describedby="{% if (ctx.component.description) { %}d-{{ctx.instance.id}}-{{ctx.component.key}} {% } %}e-{{ctx.instance.id}}-{{ctx.component.key}}"
+      aria-required="{{ctx.component.validate.required}}"
     >
     {% if (!ctx.component.disableClearIcon) { %}
       <i

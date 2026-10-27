@@ -1204,6 +1204,7 @@ export default class Component extends Element {
 
     this.loadRefs(element, {
       messageContainer: 'single',
+      messageLiveRegion: 'single',
       tooltip: 'multiple'
     });
 
@@ -1267,6 +1268,7 @@ export default class Component extends Element {
    * Remove all event handlers.
    */
   detach() {
+    clearTimeout(this.announceTimer);
     this.refs = {};
     this.removeEventListeners();
     this.detachLogic();
@@ -2054,6 +2056,9 @@ export default class Component extends Element {
 
     messages = _.uniqBy(messages, message => message.message);
 
+    // Messages reach here only once they are shown (dirty or no longer pristine), so every one is announced.
+    this.announceMessages(messages);
+
     if (this.refs.messageContainer) {
       this.setContent(this.refs.messageContainer, messages.map((message) => {
         if (message.message && typeof message.message === 'string') {
@@ -2062,6 +2067,40 @@ export default class Component extends Element {
         return this.renderTemplate('message', message);
       }
       ).join(''));
+    }
+  }
+
+  /**
+   * Speak the messages through the component's hidden live region.
+   *
+   * The visible message container is the aria-describedby target and must not be a live
+   * region: VoiceOver skips live regions when reading a control's description. The update
+   * is delayed because a live region change that lands together with the blur's focus
+   * change is dropped by VoiceOver in favour of announcing the newly focused control.
+   */
+  announceMessages(messages) {
+    const text = messages
+      .map((message) => (typeof message.message === 'string' ? message.message : ''))
+      .filter(Boolean)
+      .join('. ');
+    if (!this.refs.messageLiveRegion || !text || text === this.announcedText) {
+      return;
+    }
+    this.clearAnnouncement();
+    this.announcedText = text;
+    this.announceTimer = setTimeout(() => {
+      if (this.refs.messageLiveRegion) {
+        this.refs.messageLiveRegion.textContent = text;
+      }
+    }, 500);
+  }
+
+  clearAnnouncement() {
+    clearTimeout(this.announceTimer);
+    this.announceTimer = null;
+    this.announcedText = null;
+    if (this.refs.messageLiveRegion) {
+      this.refs.messageLiveRegion.textContent = '';
     }
   }
 
@@ -3203,6 +3242,7 @@ export default class Component extends Element {
       if (this.refs.modalMessageContainer) {
         this.empty(this.refs.modalMessageContainer);
       }
+      this.clearAnnouncement();
       this.error = null;
       if (invalidInputRefs) {
         this.setErrorClasses(invalidInputRefs, dirty, hasErrors, !!messages.length);

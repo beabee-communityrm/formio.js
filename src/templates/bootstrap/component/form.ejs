@@ -1,6 +1,7 @@
 <div id="{{ctx.id}}" class="{{ctx.classes}}"{% if (ctx.styles) { %} styles="{{ctx.styles}}"{% } %} ref="component">
   {% if (ctx.visible) { %}
   {{ctx.children}}
-  <div ref="messageContainer" id="e-{{ctx.instance.id}}-{{ctx.component.key}}" class="formio-errors invalid-feedback" role="alert"></div>
+  <div ref="messageContainer" id="e-{{ctx.instance.id}}-{{ctx.component.key}}" class="formio-errors invalid-feedback"></div>
+  <div ref="messageLiveRegion" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap"></div>
   {% } %}
 </div>
